@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ぽかぽかレシピ帖 | カテゴリ別レシピ一覧</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <p class="hero__tag">毎日のごはんを、もう少し楽しく。</p>
+        <h1>ぽかぽかレシピ帖</h1>
+        <p class="hero__desc">
+          あたたかみのある家庭料理レシピをカテゴリ別に掲載。検索で気になる料理もすぐ見つかります。
+        </p>
+        <label for="recipe-search" class="search-label">レシピ検索</label>
+        <input
+          id="recipe-search"
+          type="search"
+          placeholder="例: カレー、パスタ、スープ..."
+          autocomplete="off"
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>カテゴリから探す</h2>
+        <div id="category-list" class="category-list"></div>
+      </section>
+
+      <section>
+        <div class="result-head">
+          <h2>レシピ一覧</h2>
+          <p id="result-count"></p>
+        </div>
+        <div id="recipe-grid" class="recipe-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 ぽかぽかレシピ帖</p>
+    </footer>
+
+    <script src="recipes.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

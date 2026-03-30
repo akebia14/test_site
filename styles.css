@@ -1,0 +1,193 @@
+:root {
+  --bg: #fff8f1;
+  --card: #fffdf9;
+  --text: #4a3427;
+  --accent: #d9864c;
+  --accent-dark: #b36430;
+  --border: #f0d9c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.hero,
+.sub-hero {
+  background: linear-gradient(135deg, #ffe7d1, #ffd7b8);
+  border-bottom: 2px solid var(--border);
+}
+
+.hero__inner,
+.sub-hero__inner,
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero__inner {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero__tag {
+  margin: 0;
+  font-weight: 700;
+  color: #8b4a2d;
+}
+
+h1 {
+  margin: 0.3rem 0;
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+}
+
+.hero__desc {
+  margin-bottom: 1.2rem;
+  max-width: 62ch;
+}
+
+#recipe-search {
+  width: min(520px, 100%);
+  padding: 0.8rem 1rem;
+  border: 2px solid #f3c9a8;
+  border-radius: 999px;
+  font-size: 1rem;
+  background: #fffdfb;
+}
+
+.search-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.container {
+  padding: 2rem 0 3rem;
+}
+
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.category-chip {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.category-chip.is-active,
+.category-chip:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card,
+.recipe-detail {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgb(125 79 44 / 8%);
+}
+
+.recipe-card img,
+.detail-image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.recipe-card__body,
+.recipe-detail {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.recipe-meta,
+.detail-meta {
+  font-size: 0.88rem;
+  color: #8b6955;
+  margin: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+.recipe-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.recipe-link:hover,
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.sub-hero__inner {
+  padding: 1.4rem 0;
+}
+
+.back-link {
+  color: #7a4529;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.detail-description {
+  margin: 0.8rem 0 1.2rem;
+}
+
+.detail-section + .detail-section {
+  margin-top: 1.4rem;
+}
+
+.empty-text {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--border);
+  background: #fff4eb;
+}
